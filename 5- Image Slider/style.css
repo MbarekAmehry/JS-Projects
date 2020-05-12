@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  background: #ccc;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 2px solid #0fa8a8;
+  border-radius: 5px;
+  background: url(img/pic-0.jpg) center center/cover;
+  width: 60%;
+  height: 50vh;
+  position: relative;
+
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #0fa8a8;
+}
+
+.btn:hover{
+  background: #0fa8a8;
+}
+
+.btn i:hover{
+  color: #fff;
+}
+
+.btn:active{
+  scale: 0.97;
+}
+
+.btn i{
+  color: #0fa8a8;
+  font-size: 1.5rem;
+}
+.fas:active{
+  outline: none;
+
+}
+
+.prevBtn{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.nextBtn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+
+  
+}

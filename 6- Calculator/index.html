@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/7ddc26210c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input">
+        <div class="previousOperand" data-previousOperand></div>
+        <div class="currentOperand" 
+        data-currentOperand></div>
+      </div>
+      <!-- <input type="text" class="input" /> -->
+      <div class="grid">
+        <button class="clear btn symbol" data-clear>C</button>
+        <button class="btn symbol" data-delete>Del</button>
+        <button class="btn symbol"data-operation>%</button>
+        <button class="btn symbol" data-operation>÷</button>
+        <button class="btn nums" data-number>7</button>
+        <button class="btn nums" data-number>8</button>
+        <button class="btn nums" data-number>9</button>
+        <button class="btn symbol" data-operation>*</button>
+        <button class="btn nums" data-number>4</button>
+        <button class="btn nums" data-number>5</button>
+        <button class="btn nums" data-number>6</button>
+        <button class="btn symbol" data-operation>-</button>
+        <button class="btn nums" data-number>1</button>
+        <button class="btn nums" data-number>2</button>
+        <button class="btn nums" data-number>3</button>
+        <button class="btn symbol plus" data-operation>+</button>
+        <button class="btn nums" data-number>0</button>
+        <button class="btn symbol" data-number>.</button>
+        <button class="btn equal symbol" data-equals>=</button>
+      </div>
+    </div>
+
+   
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  background-color: hsl(210, 36%, 96%);
+}
+h1 {
+  position: relative;
+  font-size: 2.5rem;
+}
+
+h1::after {
+  position: absolute;
+  bottom: -20%;
+  left: 25%;
+  content: "";
+  width: 50%;
+  height: 4px;
+  background-color: hsl(205, 89%, 70%);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 5em;
+  padding: 2em 0;
+  max-width: 750px;
+  width: 87%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.profile,
+.profile::before {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.profile {
+  background: url(person-1.jpeg) center center/cover;
+  position: relative;
+}
+.profile:hover {
+  border: 2px solid hsl(205, 89%, 70%);
+}
+
+.profile::before {
+  content: "";
+  background-color: hsl(205, 89%, 70%);
+  position: absolute;
+  right: -4%;
+  top: -2%;
+  z-index: -1;
+}
+
+.profile i {
+  color: #fff;
+  background-color: hsl(205, 89%, 70%);
+  padding: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+}
+
+.fullName {
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  margin-top: 1em;
+  font-size: 1.3rem;
+}
+
+.job {
+  text-transform: uppercase;
+  color: hsl(205, 89%, 70%);
+  padding: 0.7em;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.review {
+  width: 89%;
+  max-width: 550px;
+  padding-bottom: 0.7em;
+  color: #222;
+  font-size: 17px;
+  margin: 0 auto;
+}
+
+.content i {
+  color: hsl(205, 89%, 70%);
+  font-size: 1.7em;
+  margin: 0.2em 0.5em 0.8em;
+}
+
+.content i:hover {
+  transform: scale(1.2);
+}
+
+.random {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid hsl(205, 89%, 70%);
+  border-radius: 10px;
+  color: hsl(205, 89%, 70%);
+  font-size: 20px;
+  padding: 0.4em 0.6em;
+}
+
+.random:hover {
+  color: #fff;
+  background-color: hsl(205, 89%, 70%);
+}
