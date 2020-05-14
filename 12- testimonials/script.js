@@ -47,41 +47,39 @@ const reviews = [
 ];
 
 let currentItem = 0;
-
-// Load initial item on Load
 window.addEventListener("DOMContentLoaded", () => {
-  addToDOM(currentItem);
+  addItemToDOM(currentItem);
 });
 
-// Add items to DOM
-function addToDOM(person) {
-  const item = reviews[person];
+function addItemToDOM() {
+  let item = reviews[currentItem];
+
+  profile.style.background = `url(${item.img}) center center/cover`;
   fullName.innerHTML = item.name;
   job.innerHTML = item.job;
   review.innerHTML = item.text;
-  profile.style.background = `url(${item.img}) center center/cover`;
 }
 
-// show Next item
+// show Next review when next button is clicked
 nextBtn.addEventListener("click", () => {
   currentItem++;
   if (currentItem > reviews.length - 1) {
     currentItem = 0;
   }
-  addToDOM(currentItem);
+  addItemToDOM(currentItem);
 });
 
-// show Previous item
+// show previous review when previous button is clicked
 prevBtn.addEventListener("click", () => {
   currentItem--;
   if (currentItem < 0) {
     currentItem = reviews.length - 1;
   }
-  addToDOM(currentItem);
+  addItemToDOM(currentItem);
 });
 
-// Get random Item
+// show random reviews when SURPRISE ME  is click
 randomBtn.addEventListener("click", () => {
   currentItem = Math.floor(Math.random() * reviews.length);
-  addToDOM(currentItem);
+  addItemToDOM(currentItem);
 });
