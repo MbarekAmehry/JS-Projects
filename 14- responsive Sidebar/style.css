@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --primary: #399eda;
+  --secondary: #e5eaee;
+  --dark: #1249ae;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(210, 36%, 96%);
+  background-color: var(--secondary);
+  font-weight: 400;
+}
+.container {
+  position: relative;
+}
+
+/*====== Side Bar ======*/
+aside {
+  background-color: #fff;
+  position: relative;
+  width: 350px;
+  z-index: 2;
+  height: 100vh;
+  transition: all 0.3s linear;
+}
+nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.8em 0;
+}
+
+/*====== Logo ======*/
+.logo {
+  width: 100px;
+  margin-bottom: 1em;
+}
+
+/*====== Menu ====== */
+ul {
+  list-style: none;
+}
+
+.menu li a {
+  display: block;
+  padding: 0.6em 0;
+  font-size: 22px;
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 4px;
+  transition: all 0.3s linear;
+}
+
+.menu li a:hover {
+  padding-left: 1.7em;
+  background-color: #add0e4;
+}
+
+/*====== Close sidebar ====== */
+.close {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  font-weight: bold;
+  font-size: 35px;
+  color: rgb(253, 43, 43);
+}
+
+.close:active {
+  transform: scale(0.98);
+}
+
+/*====== Social media icons ====== */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials li {
+  padding-right: 1em;
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+/*====== Bars ====== */
+
+.bars {
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s linear;
+  font-size: 39px;
+  margin-right: 0.7em;
+  position: absolute;
+  top: 2%;
+  right: 0%;
+}
+.fa-bars {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.bars:hover {
+  transform: scale(1.25);
+}
+
+.logo,
+.menu li a {
+  padding-left: 1.2em;
+}
+
+/*====== Media QUERIES ====== */
+
+@media (max-width: 650px) {
+  aside {
+    width: 100%;
+  }
+}
+
+.hide-aside {
+  width: 0;
+  overflow: hidden;
+}
