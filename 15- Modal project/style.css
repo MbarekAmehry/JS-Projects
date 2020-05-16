@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+/* ===== Global styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+.flex {
+  position: relative;
+}
+
+.container {
+  max-width: 600px;
+  width: 96%;
+  height: 28vh;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(202, 228, 243, 0.3);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Hero ===== */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(hero.jpg);
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 0.5em;
+}
+
+.btn {
+  background-color: #399eda;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  padding: 0.5em 2.5em;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  color: #399eda;
+  background-color: #fff;
+  border: #399eda 1px solid;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== Overlay Model ===== */
+.overlay-model {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(57, 158, 218, 0.3);
+  visibility: hidden;
+  z-index: -3;
+}
+
+.fa-times-circle {
+  position: absolute;
+  top: 9%;
+  right: 3%;
+  font-size: 1.6rem;
+  color: rgb(182, 30, 30);
+}
+
+.fa-times-circle:hover {
+  transform: scale(1.1);
+}
+
+.hide-overlay {
+  visibility: visible;
+  z-index: 3;
+}
