@@ -10,7 +10,7 @@
 //   });
 // });
 
-// ******* Method #1 ******
+// ******* Method #2 ******
 const questions = document.querySelectorAll(".question");
 
 questions.forEach((question) => {
