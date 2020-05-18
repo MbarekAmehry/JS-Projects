@@ -45,7 +45,7 @@ h1::after {
   font-size: 18px;
   padding: 0.2em 0.8em;
   border-radius: 6px;
-  margin: 0.3em;
+  margin: 0.3em 0.4em;
 }
 .categories button:hover {
   background-color: goldenrod;

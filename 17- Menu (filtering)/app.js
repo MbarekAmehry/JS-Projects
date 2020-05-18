@@ -79,13 +79,22 @@ const menu = [
     img: "./images/item-10.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 11,
+    title: "bison steak",
+    category: "Brunch",
+    price: 22.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 const products = document.querySelector(".products");
-const filter_btn = document.querySelectorAll(".btn-filter");
+const categories = document.querySelector(".categories");
 
 // load items
 window.addEventListener("DOMContentLoaded", () => {
   displayitems(menu);
+  displayButtons();
 });
 
 // Display items on the DOM
@@ -110,18 +119,41 @@ function displayitems(menuItem) {
   products.innerHTML = diplayProduct;
 }
 
-// Filter items
-filter_btn.forEach((element) => {
-  element.addEventListener("click", (e) => {
-    const category = e.target.dataset.id;
+function displayButtons() {
+  // get unique categories
+  const uniqueCategories = menu.reduce(
+    (values, item) => {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  // adding button you UI dymanicaly
+  const categoryBtn = uniqueCategories
+    .map((item) => {
+      return `<button class="btn-filter" data-id="${item}">${item}</button>`;
+    })
+    .join("");
+  // inserting button in the DOM
+  categories.innerHTML = categoryBtn;
 
-    const fiteredItems = menu.filter((item) => {
-      if (item.category == category) return item;
+  const filter_btn = document.querySelectorAll(".btn-filter");
+  // Filter items
+  filter_btn.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      const category = e.target.dataset.id;
+
+      const fiteredItems = menu.filter((item) => {
+        if (item.category == category) return item;
+      });
+      // if all btn is clicked
+      if (category == "all") {
+        displayitems(menu);
+      } else {
+        displayitems(fiteredItems);
+      }
     });
-    if (category == "all") {
-      displayitems(menu);
-    } else {
-      displayitems(fiteredItems);
-    }
   });
-});
+}
