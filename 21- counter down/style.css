@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  background-color: #f4f4f4;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 95%;
+  margin: 4em auto;
+  flex-direction: column;
+}
+.about {
+  color: hsl(210, 22%, 49%);
+}
+.container-tabs {
+  margin-top: 2em;
+  width: 100%;
+}
+
+.tab {
+  width: 45%;
+  min-height: 300px;
+  margin: 0 1em;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-1 {
+  background: url(images/history.jpg) center center/cover;
+  transition: all 0.5s linear;
+}
+
+.tab-2 {
+  background-color: #fff;
+  /* min-height: 400px; */
+}
+
+.headings {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.title {
+  width: 100%;
+  padding: 0.8em 0;
+  background-color: #ccc;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.title a {
+  padding: 0.8em 2em;
+  width: fit-content;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s linear;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.content {
+  padding: 1em;
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+.content-item {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  /* visibility: hidden; */
+  display: none;
+}
+
+.visible {
+  /* visibility: visible; */
+  display: block;
+}
+
+.content h3 {
+  padding-bottom: 1em;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.content p {
+  color: hsl(210, 22%, 49%);
+  line-height: 1.5;
+}
+
+@media (max-width: 950px) {
+  .container-tabs {
+    flex-direction: column !important;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .tab {
+    width: 95%;
+    margin: 0.7em 0;
+  }
+}
