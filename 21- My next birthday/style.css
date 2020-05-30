@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(34, 121, 195);
+  background: linear-gradient(
+      0deg,
+      rgba(34, 121, 195, 0.9192051820728291) 0%,
+      rgba(45, 253, 223, 0.9500175070028011) 100%
+    )
+    no-repeat;
+  color: aliceblue;
+  font-family: "Lato", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  color: rgba(55, 105, 148, 0.92);
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 4px;
+  padding: 1em 0;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  padding: 0.7em 0.7em;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.para {
+  font-size: 24px;
+  margin: 2em 0 0.6em;
+}
+
+.timeLeft {
+  margin: 4em 0 6em 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.timeLeft img {
+  border-radius: 5px;
+}
+
+.card {
+  /* border: 8px solid rgb(78, 48, 48); */
+  border: 8px solid rgba(55, 105, 148, 0.92);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 7px;
+  margin: 0 5px 1em 5px;
+}
+
+.card h1 {
+  font-size: 3.4em;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.statement {
+  font-size: 21px;
+  letter-spacing: 3.5px;
+  font-style: italic;
+}
